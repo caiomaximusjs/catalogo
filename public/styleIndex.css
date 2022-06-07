@@ -1,0 +1,784 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Macondo&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Macondo&family=Oswald:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: bebas neue;
+  scroll-behavior: smooth;
+}
+
+nav {
+  margin-top: -10rem;
+  z-index: 101;
+  position: fixed;
+  background: rgb(255, 6, 72);
+  background: radial-gradient(
+    circle,
+    rgba(255, 6, 72, 1) 55%,
+    rgba(115, 13, 40, 1) 100%
+  );
+  padding: 0.5rem;
+  width: 100%;
+}
+nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ffffff;
+  transition: 0.3s ease-in-out;
+}
+nav ul li a img {
+  width: 21rem;
+  height: 6rem;
+  transition: 0.2s ease-in-out;
+}
+nav ul li a:hover {
+  color: #730d28;
+}
+nav ul li a img:hover {
+  transform: scale(1.05);
+}
+body {
+  overflow-x: hidden;
+  background-image: url(/img/linhas.png);
+  background-blend-mode: overlay;
+  background-color: #1a1e26;
+}
+body h1 {
+  color: #f21365;
+  font-size: 3.5rem;
+  margin-top: 10rem;
+  margin-bottom: 30rem;
+  text-align: center;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 5rem;
+}
+.btn1 {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 2rem;
+  font-family: bebas neue;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #f21365;
+  padding: 20px 66px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 1s all ease;
+}
+.btn1::before {
+  background: #f21365;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.4s ease-in-out;
+}
+.btn1::before {
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.btn1:hover::before {
+  height: 380%;
+}
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 17rem;
+  letter-spacing: 0.6rem;
+  font-size: 4rem;
+}
+body h2 {
+  letter-spacing: 0.3rem;
+  color: #f21365;
+  font-size: 2rem;
+  text-align: start;
+  margin-left: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 0.5rem;
+}
+main {
+  margin: 0 0rem 0 0.6rem;
+}
+
+section#cards {
+  border-radius: 3rem 0 0 3rem;
+  background-color: #1b1b1b3b;
+  margin-bottom: 1.5rem;
+  display: flex;
+  overflow-x: auto;
+  border: solid 0.5px #f21365;
+}
+
+section#cards div.jogos {
+  border: solid 1px white;
+  width: 13rem;
+  background: rgb(242, 19, 79);
+  background: linear-gradient(
+    180deg,
+    rgba(242, 19, 79, 1) 39%,
+    rgba(255, 6, 72, 1) 100%
+  );
+  opacity: 60%;
+  border-radius: 0.4rem;
+  margin-top: 2rem;
+  box-shadow: 6px 5px 5px #00000015;
+  padding: 0.5rem;
+  padding-bottom: 0.2rem;
+  margin-right: 0.4rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  min-width: 13rem;
+  transition: 0.3s ease-in-out;
+}
+section#cards div.jogos:hover {
+  opacity: 1;
+  transform: scale(1.06);
+}
+section#cards div.jogos a {
+  text-decoration: none;
+}
+section#cards div.jogos h3 {
+  color: #ffffff;
+  text-align: center;
+  padding-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+section#cards div.jogos img {
+  border: solid 1px white;
+  width: 100%;
+  height: 270px;
+}
+div.box {
+  transform: translateX(400%);
+  transition: transform 1s ease;
+}
+
+div.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+div.box.show {
+  transform: translateX(0);
+}
+section#cards div.jogos a#apagar {
+  display: flex;
+  justify-content: flex-end;
+}
+section#cards div.jogos a#apagarTerror i {
+  font-size: 1.2rem;
+  border: none;
+  color: #ffffff;
+  transition: 0.2s ease;
+  margin-right: 0.4rem;
+}
+section#cards div.jogos a#detalhes i {
+  font-size: 1.2rem;
+  border: none;
+  color: #ffffff;
+  transition: 0.2s ease;
+  margin-right: 0.4rem;
+}
+section#cards div.jogos a#apagar i {
+  font-size: 1.2rem;
+  border: none;
+  color: #ffffff;
+  transition: 0.2s ease;
+  margin-right: 0.4rem;
+}
+section#cards div.jogos a#editar i {
+  font-size: 1.2rem;
+  border: none;
+  color: #ffffff;
+  transition: 0.2s ease;
+  margin-right: 0.4rem;
+}
+section#cards div.jogos a#apagarTerror i:hover {
+  color: rgb(171, 5, 5);
+  transform: scale(1.05);
+}
+section#cards div.jogos a#apagar i:hover {
+  color: rgb(171, 5, 5);
+  transform: scale(1.05);
+}
+section#cards div.jogos a#editar i:hover {
+  color: rgb(0, 96, 29);
+  transform: scale(1.05);
+}
+section#cards div.jogos a#detalhes i:hover {
+  color: rgb(0, 96, 29);
+  transform: scale(1.05);
+}
+section#cards div.jogos div.icons {
+  display: flex;
+  justify-content: space-between;
+}
+section#messageCreate {
+  padding: 1.5rem;
+  background-color: rgb(0, 98, 29);
+  color: #ffffff;
+  position: fixed;
+  top: 7.5rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#messageDelete {
+  padding: 1.5rem;
+  background-color: rgb(238, 76, 76);
+  color: #ffffff;
+  position: fixed;
+  top: 7.5rem;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#messageCreate p,
+section#messageDelete p {
+  font-family: roboto;
+  color: #ffffff;
+}
+
+span#close {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+span#close:hover {
+  color: rgb(255, 0, 0);
+  transform: scale(1.5);
+}
+div.modalDelete {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+div.modalDelete p {
+  width: 100%;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+div.modalDelete a {
+  text-align: center;
+  border: solid 2px white;
+  margin: 0.3rem;
+  padding: 0.4rem;
+  width: 30%;
+  font-size: 1.1rem;
+}
+div.modalDelete a#sim {
+  background-color: rgb(6, 165, 6);
+  color: #ffffff;
+}
+div.modalDelete a#nao {
+  background-color: rgb(243, 35, 35);
+  color: #ffffff;
+}
+footer{
+ justify-content: center;
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  background-color: #f21365;
+  margin-top: 6rem;
+}
+
+footer ul{
+  list-style: none;
+  display: flex;
+}
+footer ul li{
+  padding: 1.4rem;
+  text-align: center;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  
+}
+footer ul li a i{
+  font-size: 2rem;
+}
+footer ul li a i#git{
+  background-color: #1a1e26;
+  padding: .4rem;
+  border-radius: 1rem;
+}
+footer ul li a i#link{
+  background-color: #195feb;
+  padding: .4rem;
+  border-radius: 1rem;
+}
+footer ul li a i:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px){
+
+  nav {
+    margin-top: 0;
+    z-index: 101;
+    position: relative;
+    background: rgb(255, 6, 72);
+    background: radial-gradient(
+      circle,
+      rgba(255, 6, 72, 1) 55%,
+      rgba(115, 13, 40, 1) 100%
+    );
+    padding: 0.5rem;
+    width: 100%;
+  }
+  nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+  nav ul li a img {
+    width: 12rem;
+    height: 4rem;
+    transition: 0.2s ease-in-out;
+  }
+  nav ul li a:hover {
+    color: #730d28;
+  }
+  nav ul li a img:hover {
+    transform: scale(1.05);
+  }
+  body {
+    overflow-x: hidden;
+    background-image: url(/img/linhas.png);
+    background-blend-mode: overlay;
+    background-color: #1a1e26;
+  }
+  body h1 {
+    color: #f21365;
+    font-size: 2.7rem;
+    margin-top: 10rem;
+    margin-bottom: 24rem;
+    text-align: center;
+  }
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+  }
+  .btn1 {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    font-family: bebas neue;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #f21365;
+    padding: 15px 55px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  .btn1::before {
+    background: #f21365;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.4s ease-in-out;
+  }
+  .btn1::before {
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .btn1:hover::before {
+    height: 380%;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 17rem;
+    letter-spacing: 0.6rem;
+    font-size: 4rem;
+  }
+  body h2 {
+    letter-spacing: 0.3rem;
+    color: #f21365;
+    font-size: 2rem;
+    text-align: start;
+    margin-left: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  main {
+    margin: 0 0rem 0 0.6rem;
+  }
+  
+  section#cards {
+    border-radius: 3rem 0 0 3rem;
+    background-color: #1b1b1b3b;
+    margin-bottom: 1.5rem;
+    display: flex;
+    overflow-x: auto;
+    border: solid 0.5px #f21365;
+  }
+  
+  section#cards div.jogos {
+    border: solid 1px white;
+    width: 10rem;
+    background: rgb(242, 19, 79);
+    background: linear-gradient(
+      180deg,
+      rgba(242, 19, 79, 1) 39%,
+      rgba(255, 6, 72, 1) 100%
+    );
+    opacity: 60%;
+    border-radius: 0.4rem;
+    margin-top: 2rem;
+    box-shadow: 6px 5px 5px #00000015;
+    padding: 0.5rem;
+    padding-bottom: 0.2rem;
+    margin-right: 0.4rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+    min-width: 13rem;
+    transition: 0.3s ease-in-out;
+  }
+  section#cards div.jogos:hover {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  section#cards div.jogos a {
+    text-decoration: none;
+  }
+  section#cards div.jogos h3 {
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 0.7rem;
+    font-size: 1.3rem;
+  }
+  section#cards div.jogos img {
+    border: solid 1px white;
+    width: 100%;
+    height: 270px;
+  }
+  div.box {
+    transform: translateX(400%);
+    transition: transform 1s ease;
+  }
+  
+  div.box:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  div.box.show {
+    transform: translateX(0);
+  }
+  section#cards div.jogos a#apagar {
+    display: flex;
+    justify-content: flex-end;
+  }
+  section#cards div.jogos a#apagarTerror i {
+    font-size: 1.2rem;
+    border: none;
+    color: #ffffff;
+    transition: 0.2s ease;
+    margin-right: 0.4rem;
+  }
+  section#cards div.jogos a#detalhes i {
+    font-size: 1.2rem;
+    border: none;
+    color: #ffffff;
+    transition: 0.2s ease;
+    margin-right: 0.4rem;
+  }
+  section#cards div.jogos a#apagar i {
+    font-size: 1.2rem;
+    border: none;
+    color: #ffffff;
+    transition: 0.2s ease;
+    margin-right: 0.4rem;
+  }
+  section#cards div.jogos a#editar i {
+    font-size: 1.2rem;
+    border: none;
+    color: #ffffff;
+    transition: 0.2s ease;
+    margin-right: 0.4rem;
+  }
+  section#cards div.jogos a#apagarTerror i:hover {
+    color: rgb(171, 5, 5);
+    transform: scale(1.05);
+  }
+  section#cards div.jogos a#apagar i:hover {
+    color: rgb(171, 5, 5);
+    transform: scale(1.05);
+  }
+  section#cards div.jogos a#editar i:hover {
+    color: rgb(0, 96, 29);
+    transform: scale(1.05);
+  }
+  section#cards div.jogos a#detalhes i:hover {
+    color: rgb(0, 96, 29);
+    transform: scale(1.05);
+  }
+  section#cards div.jogos div.icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  section#messageCreate {
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 7.5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section#messageDelete {
+    padding: 1.5rem;
+    background-color: rgb(238, 76, 76);
+    color: #ffffff;
+    position: fixed;
+    top: 7.5rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section#messageCreate p,
+  section#messageDelete p {
+    font-family: roboto;
+    color: #ffffff;
+  }
+  
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  span#close:hover {
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  }
+  div.modalDelete {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  div.modalDelete p {
+    width: 100%;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  
+  div.modalDelete a {
+    text-align: center;
+    border: solid 2px white;
+    margin: 0.3rem;
+    padding: 0.4rem;
+    width: 30%;
+    font-size: 1.1rem;
+  }
+  div.modalDelete a#sim {
+    background-color: rgb(6, 165, 6);
+    color: #ffffff;
+  }
+  div.modalDelete a#nao {
+    background-color: rgb(243, 35, 35);
+    color: #ffffff;
+  }
+  footer{
+   justify-content: center;
+    display: flex;
+    width: 100%;
+    padding: .7rem;
+    margin-top: 6rem;
+  }
+  
+  footer ul{
+    list-style: none;
+    display: flex;
+  }
+  footer ul li{
+    padding: 1.4rem;
+    text-align: center;
+  }
+  footer ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    
+  }
+  footer ul li a i{
+    font-size: 2rem;
+  }
+  footer ul li a i#git{
+    background-color: #1a1e26;
+    padding: .4rem;
+    border-radius: 1rem;
+  }
+  footer ul li a i#link{
+    background-color: #195feb;
+    padding: .4rem;
+    border-radius: 1rem;
+  }
+  footer ul li a i:hover{
+    transform: scale(1.2);
+  }
+
+}
+
+@media only screen and (max-width: 900px){
+
+  nav {
+    margin-top: 0;
+    z-index: 101;
+    position: relative;
+    background: rgb(255, 6, 72);
+    background: radial-gradient(
+      circle,
+      rgba(255, 6, 72, 1) 55%,
+      rgba(115, 13, 40, 1) 100%
+    );
+    padding: 0.5rem;
+    width: 100%;
+  }
+  nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  nav ul li {
+    list-style: none;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+    transition: 0.3s ease-in-out;
+  }
+  nav ul li a img {
+    width: 12rem;
+    height: 4rem;
+    transition: 0.2s ease-in-out;
+  }
+  nav ul li a:hover {
+    color: #730d28;
+  }
+  nav ul li a img:hover {
+    transform: scale(1.05);
+  }
+  body {
+    overflow-x: hidden;
+    background-image: url(/img/linhas.png);
+    background-blend-mode: overlay;
+    background-color: #1a1e26;
+  }
+  body h1 {
+    color: #f21365;
+    font-size: 2.7rem;
+    margin-top: 10rem;
+    margin-bottom: 24rem;
+    text-align: center;
+  }
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5rem;
+  }
+  .btn1 {
+    position: relative;
+    display: block;
+    color: white;
+    font-size: .8rem;
+    font-family: bebas neue;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #f21365;
+    padding: 10px 45px;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+}

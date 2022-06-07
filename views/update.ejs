@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleUpdate.css">
+    <link rel="icon" href="/img/icon.png">
+    <title>Maximus| Editar jogo</title>
+</head>
+<nav>
+    <ul>
+        <li><a href="/singUp">Cadastrar</a></li>
+        <li><a href="/">
+                <img src="/img/logoMaximus.png" alt="">
+            </a></li>
+        <li><a href="/#cards">Meus jogos</a></li>
+    </ul>
+</nav>
+
+<body>
+
+
+    <% if( tipo=="terror" ) { %>
+
+
+        <h1>Editar jogo</h1>
+        <section id="cadastro">
+            <div id="imagem">
+                <img src="<%= jogosTerror[id].imagem %>" alt="">
+            </div>
+            <div id="forms">
+                <form action="/updateTerror/<%= jogosTerror[id].id %>" method="post">
+                    <div class="container">
+                        <div class="label">
+                            <label for="nome">Nome</label>
+                        </div>
+
+                        <input type="text" id="nome" name="nome" value="<%=jogosTerror[id].nome%>" required>
+                    </div>
+                    <div class="container">
+                        <div class="label">
+                            <label for="descricao">Descrição</label>
+                        </div>
+                        <input type="text" id="descricao" name="descricao" value="<%= jogosTerror[id].descricao %>"
+                            required>
+                    </div>
+                    <div class="container">
+                        <div class="label">
+                            <label for="tipo">Gênero</label>
+                        </div>
+                        <select id="tipo" name="tipo" value="<%= jogosTerror[id].tipo%>">
+                            <option value="terror">terror</option>
+                        </select>
+                    </div>
+                    <div class="container">
+                        <div class="label">
+                            <label for="imagem">Link da Imagem</label>
+                        </div>
+                        <input type="text" id="imagem" name="imagem" value="<%= jogosTerror[id].imagem %>" required>
+                    </div>
+                    <div class="container">
+                        <div class="label">
+                            <label for="estudio">estudio</label>
+                        </div>
+                        <input type="text" id="estudio" name="estudio" value="<%= jogosTerror[id].estudio %>" required>
+                    </div>
+                    <div class="container">
+                        <div class="label">
+                            <label for="ano">Ano de lançamento</label>
+                        </div>
+                        <input type="text" id="ano" name="ano" value="<%= jogosTerror[id].ano %>" required>
+                    </div>
+
+
+
+
+                    <button id="btnAtualizar" type="submit">salvar</button>
+
+                </form>
+            </div>
+
+        </section>
+        <% }else if(tipo=="tiro" ){ %>
+
+            <h1>Editar jogo</h1>
+            <section id="cadastro">
+                <div id="imagem">
+                    <img src="<%= jogosTiro[id].imagem %>" alt="">
+                </div>
+                <div id="forms">
+                    <form action="/updateTiro/<%= jogosTiro[id].id %>" method="post">
+                        <div class="container">
+                            <div class="label">
+                                <label for="nome">Nome</label>
+                            </div>
+
+                            <input type="text" id="nome" name="nome" value="<%=jogosTiro[id].nome%>" required>
+                        </div>
+                        <div class="container">
+                            <div class="label">
+                                <label for="descricao">Descrição</label>
+                            </div>
+                            <input type="text" id="descricao" name="descricao" value="<%= jogosTiro[id].descricao %>"
+                                required>
+                        </div>
+                        <div class="container">
+                            <div class="label">
+                                <label for="tipo">Gênero</label>
+                            </div>
+                            <select id="tipo" name="tipo" value="<%= jogosTiro[id].tipo%>">
+                                <option value="tiro">tiro</option>
+                            </select>
+                        </div>
+                        <div class="container">
+                            <div class="label">
+                                <label for="imagem">Link da Imagem</label>
+                            </div>
+                            <input type="text" id="imagem" name="imagem" value="<%= jogosTiro[id].imagem %>" required>
+                        </div>
+                        <div class="container">
+                            <div class="label">
+                                <label for="estudio">estudio</label>
+                            </div>
+                            <input type="text" id="estudio" name="estudio" value="<%= jogosTiro[id].estudio %>"
+                                required>
+                        </div>
+                        <div class="container">
+                            <div class="label">
+                                <label for="ano">Ano de lançamento</label>
+                            </div>
+                            <input type="text" id="ano" name="ano" value="<%= jogosTiro[id].ano %>" required>
+                        </div>
+
+
+
+
+                        <button id="btnAtualizar" type="submit">salvar</button>
+
+                    </form>
+                </div>
+
+            </section>
+
+            <% } else if(tipo=="esportes" ) { %>
+                <h1>Editar jogo</h1>
+                <section id="cadastro">
+                    <div id="imagem">
+                        <img src="<%= jogosEsportes[id].imagem %>" alt="">
+                    </div>
+                    <div id="forms">
+                        <form action="/updateEsportes/<%= jogosEsportes[id].id %>" method="post">
+                            <div class="container">
+                                <div class="label">
+                                    <label for="nome">Nome</label>
+                                </div>
+
+                                <input type="text" id="nome" name="nome" value="<%=jogosEsportes[id].nome%>" required>
+                            </div>
+                            <div class="container">
+                                <div class="label">
+                                    <label for="descricao">Descrição</label>
+                                </div>
+                                <input type="text" id="descricao" name="descricao"
+                                    value="<%= jogosEsportes[id].descricao %>" required>
+                            </div>
+                            <div class="container">
+                                <div class="label">
+                                    <label for="tipo">Gênero</label>
+                                </div>
+                                <select id="tipo" name="tipo" value="<%= jogosEsportes[id].tipo%>">
+                                    <option value="esportes">esportes</option>
+                                </select>
+                            </div>
+                            <div class="container">
+                                <div class="label">
+                                    <label for="imagem">Link da Imagem</label>
+                                </div>
+                                <input type="text" id="imagem" name="imagem" value="<%= jogosEsportes[id].imagem %>"
+                                    required>
+                            </div>
+                            <div class="container">
+                                <div class="label">
+                                    <label for="estudio">estudio</label>
+                                </div>
+                                <input type="text" id="estudio" name="estudio" value="<%= jogosEsportes[id].estudio %>"
+                                    required>
+                            </div>
+                            <div class="container">
+                                <div class="label">
+                                    <label for="ano">Ano de lançamento</label>
+                                </div>
+                                <input type="text" id="ano" name="ano" value="<%= jogosEsportes[id].ano %>" required>
+                            </div>
+
+
+
+
+                            <button id="btnAtualizar" type="submit">salvar</button>
+
+                        </form>
+                    </div>
+
+                </section>
+                <% }else if(tipo=="ação" ){ %>
+
+
+                    <h1>Editar jogo</h1>
+                    <section id="cadastro">
+                        <div id="imagem">
+                            <img src="<%= jogosAcao[id].imagem %>" alt="">
+                        </div>
+                        <div id="forms">
+                            <form action="/updateAcao/<%= jogosAcao[id].id %>" method="post">
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="nome">Nome</label>
+                                    </div>
+
+                                    <input type="text" id="nome" name="nome" value="<%=jogosAcao[id].nome%>" required>
+                                </div>
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="descricao">Descrição</label>
+                                    </div>
+                                    <input type="text" id="descricao" name="descricao"
+                                        value="<%= jogosAcao[id].descricao %>" required>
+                                </div>
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="tipo">Gênero</label>
+                                    </div>
+                                    <select id="tipo" name="tipo" value="<%= jogosAcao[id].tipo%>">
+                                        <option value="ação">ação</option>
+                                    </select>
+                                </div>
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="imagem">Link da Imagem</label>
+                                    </div>
+                                    <input type="text" id="imagem" name="imagem" value="<%= jogosAcao[id].imagem %>"
+                                        required>
+                                </div>
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="estudio">estudio</label>
+                                    </div>
+                                    <input type="text" id="estudio" name="estudio" value="<%= jogosAcao[id].estudio %>"
+                                        required>
+                                </div>
+                                <div class="container">
+                                    <div class="label">
+                                        <label for="ano">Ano de lançamento</label>
+                                    </div>
+                                    <input type="text" id="ano" name="ano" value="<%= jogosAcao[id].ano %>" required>
+                                </div>
+
+
+
+
+                                <button id="btnAtualizar" type="submit">Salvar</button>
+
+                            </form>
+                        </div>
+
+                    </section>
+
+                    <% } %>
+
+</body>
+
+</html>

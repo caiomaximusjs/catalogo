@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleDetails.css">
+    <link rel="icon" href="/img/icon.png">
+    <title>Maximus | Detalhes</title>
+</head>
+<nav>
+    <ul>
+        <li><a href="/singUp">Cadastrar</a></li>
+        <li><a href="/">
+                <img src="/img/logoMaximus.png" alt="">
+            </a></li>
+        <li><a href="/#cards">Meus jogos</a></li>
+    </ul>
+</nav>
+
+<body>
+
+    <% if(tipo=="tiro" ){ %>
+
+        <body>
+            <section id="detalhes">
+                <h2 id="titulo">Detalhes de <%= jogosTiro[id].nome %>
+                </h2>
+                <div id="tudo">
+                    <div class="imagem">
+                        <img id="imagens" src="<%= jogosTiro[id].imagem%>" alt="">
+                    </div>
+                    <div class="stats">
+                        <div id="container">
+                            <div class="infos">
+                                <h2>Nome</h2>
+                                <p>
+                                    <%= jogosTiro[id].nome %>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div class="infos">
+                                <h2>Estudio</h2>
+                                <p>
+                                    <%= jogosTiro[id].estudio %>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div class="infos">
+                                <h2>Ano de lançamento</h2>
+                                <p>
+                                    <%= jogosTiro[id].ano %>
+                                </p>
+                            </div>
+                        </div>
+                        <div id="container">
+                            <div class="infos">
+                                <h2>gênero</h2>
+                                <p>
+                                    <%= jogosTiro[id].tipo %>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div id="container">
+                            <div class="infos">
+                                <h2>descrição</h2>
+                                <p>
+                                    <%=jogosTiro[id].descricao %>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+                <div class="botoes">
+                <a id="voltar" href="/">Voltar</a>
+                <a id="editar" href="/update/<%= jogosTiro[id].tipo %>/<%= jogosTiro[id].id %>">Editar</a>
+            </div>
+            </section>
+        </body>
+
+
+        <%}else if(tipo=="terror" ){ %>
+
+            <body>
+                <section id="detalhes">
+                    <h2 id="titulo">Detalhes de <%= jogosTerror[id].nome %>
+                    </h2>
+                    <div id="tudo">
+                        <div class="imagem">
+                            <img id="imagens" src="<%= jogosTerror[id].imagem%>" alt="">
+                        </div>
+                        <div class="stats">
+                            <div id="container">
+                                <div class="infos">
+                                    <h2>Nome</h2>
+                                    <p>
+                                        <%= jogosTerror[id].nome %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="container">
+                                <div class="infos">
+                                    <h2>Estudio</h2>
+                                    <p>
+                                        <%= jogosTerror[id].estudio %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="container">
+                                <div class="infos">
+                                    <h2>Ano de lançamento</h2>
+                                    <p>
+                                        <%= jogosTerror[id].ano %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="container">
+                                <div class="infos">
+                                    <h2>gênero</h2>
+                                    <p>
+                                        <%= jogosTerror[id].tipo %>
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div id="container">
+                                <div class="infos">
+                                    <h2>descrição</h2>
+                                    <p>
+                                        <%= jogosTerror[id].descricao %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="botoes">
+                        <a id="voltar" href="/">Voltar</a>
+                        <a id="editar" href="/update/<%= jogosTerror[id].tipo %>/<%= jogosTerror[id].id %>">Editar</a>
+                    </div>
+                </section>
+            </body>
+
+
+            <%}else if(tipo=="esportes" ){ %>
+
+                <body>
+                    <section id="detalhes">
+                        <h2 id="titulo">Detalhes de <%= jogosEsportes[id].nome %>
+                        </h2>
+                        <div id="tudo">
+                            <div class="imagem">
+                                <img id="imagens" src="<%= jogosEsportes[id].imagem%>" alt="">
+                            </div>
+                            <div class="stats">
+                                <div id="container">
+                                    <div class="infos">
+                                        <h2>Nome</h2>
+                                        <p>
+                                            <%= jogosEsportes[id].nome %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="container">
+                                    <div class="infos">
+                                        <h2>Estudio</h2>
+                                        <p>
+                                            <%= jogosEsportes[id].estudio %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="container">
+                                    <div class="infos">
+                                        <h2>Ano de lançamento</h2>
+                                        <p>
+                                            <%= jogosEsportes[id].ano %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div id="container">
+                                    <div class="infos">
+                                        <h2>gênero</h2>
+                                        <p>
+                                            <%= jogosEsportes[id].tipo %>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <div id="container">
+                                    <div class="infos">
+                                        <h2>descrição</h2>
+                                        <p>
+                                            <%= jogosEsportes[id].descricao %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="botoes">
+                            <a id="voltar" href="/">Voltar</a>
+                            <a id="editar" href="/update/<%= jogosEsportes[id].tipo %>/<%= jogosEsportes[id].id %>">Editar</a>
+                        </div>
+                    </section>
+                </body>
+
+                <%}else if(tipo=="ação" ){ %>
+
+                    <body>
+                        <section id="detalhes">
+                            <h2 id="titulo">Detalhes de <%= jogosAcao[id].nome %>
+                            </h2>
+                            <div id="tudo">
+                                <div class="imagem">
+                                    <img id="imagens" src="<%= jogosAcao[id].imagem%>" alt="">
+                                </div>
+                                <div class="stats">
+                                    <div id="container">
+                                        <div class="infos">
+                                            <h2>Nome</h2>
+                                            <p>
+                                                <%= jogosAcao[id].nome %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="container">
+                                        <div class="infos">
+                                            <h2>Estudio</h2>
+                                            <p>
+                                                <%= jogosAcao[id].estudio %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="container">
+                                        <div class="infos">
+                                            <h2>Ano de lançamento</h2>
+                                            <p>
+                                                <%= jogosAcao[id].ano %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="container">
+                                        <div class="infos">
+                                            <h2>gênero</h2>
+                                            <p>
+                                                <%= jogosAcao[id].tipo %>
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                    <div id="container">
+                                        <div class="infos">
+                                            <h2>descrição</h2>
+                                            <p>
+                                                <%= jogosAcao[id].descricao %>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="botoes">
+                                <a id="voltar" href="/">Voltar</a>
+                                <a id="editar" href="/update/<%= jogosAcao[id].tipo %>/<%= jogosAcao[id].id %>">Editar</a>
+                            </div>
+                        </section>
+                    </body>
+
+                    <% }%>
+</body>
+
+</html>

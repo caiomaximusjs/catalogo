@@ -1,0 +1,28 @@
+{
+  "name": "catalogo",
+  "version": "1.0.0",
+  "description": "Projeto 03 modulo 02",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiomaximusjs/catalogo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caiomaximusjs/catalogo/issues"
+  },
+  "homepage": "https://github.com/caiomaximusjs/catalogo#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

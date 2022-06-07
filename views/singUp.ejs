@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon.png">
+    <link rel="stylesheet" href="/styleSingUp.css">
+    <title>Maximus | cadastro</title>
+</head>
+<nav>
+    <ul>
+        <li><a href="/singUp">Cadastrar</a></li>
+        <li><a href="/">
+                <img src="/img/logoMaximus.png" alt="">
+            </a></li>
+        <li><a href="/#cards">Meus jogos</a></li>
+    </ul>
+</nav>
+<main>
+
+    <body>
+        <section id="cadastro">
+            <h2>Cadastre um novo jogo</h2>
+            <form action="/create" method="POST">
+                <div class="container">
+                    <div class="label">
+                        <label for="nome">Nome do jogo</label>
+                    </div>
+                    <input type="text" id="nome" name="nome" placeholder="digite o nome do jogo" required>
+                </div>
+                <div class="container">
+                    <div class="label">
+                        <label for="descricao">Descrição</label>
+                    </div>
+                    <input type="text" id="descricao" name="descricao" placeholder="digite a descrição do jogo"
+                        required>
+                </div>
+                <div class="container">
+                    <div class="label">
+                        <label for="imagem">Link da imagem</label>
+                    </div>
+                    <input type="text" id="imagem" name="imagem" required>
+                </div>
+                <div class="container">
+                    <div class="label">
+                        <label for="estudio">estudio responsavél</label>
+                    </div>
+                    <input type="text" id="estudio" name="estudio" required>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="ano">Ano de lançamento</label>
+                    </div>
+                    <input type="date" id="ano" name="ano" placeholder="ex 04/10/2001" required>
+                </div>
+                <div class="container">
+                    <div class="label">
+                        <label for="tipo">Selecione o gênero</label>
+                    </div>
+                    <select id="tipo" name="tipo">
+                        <option value="tiro">tiro</option>
+                        <option value="esportes">esportes</option>
+                        <option value="terror">terror</option>
+                        <option value="ação">ação</option>
+                    </select>
+                </div>
+
+                <div class="btnC">
+                    <button id="btnCadastrar" type="submit">Cadastrar</button>
+                </div>
+
+
+            </form>
+        </section>
+
+    </body>
+</main>
+
+</html>

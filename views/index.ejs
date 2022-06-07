@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styleIndex.css">
+    <title>Maximus | Home</title>
+</head>
+<nav>
+    <ul>
+        <li><a href="/singUp">Cadastrar</a></li>
+        <li><a href="#">
+                <img src="/img/logoMaximus.png" alt="">
+            </a></li>
+        <li><a href="">Meus jogos</a></li>
+    </ul>
+</nav>
+<% if(message !="" && message=="Parabéns um novo jogo foi cadastrado" ){ %>
+    <section id="messageCreate">
+        <p>
+            <%= message %>
+        </p> <span id="close">&times;</span>
+    </section>
+    <% }else if (message !="" && message=="O jogo foi deletado permanentemente" ){ %>
+        <section id="messageDelete">
+            <p>
+                <%= message %>
+            </p> <span id="close">&times;</span>
+        </section>
+        <% } %>
+
+
+            <main>
+
+                <body>
+
+                    <h1>Meus Jogos</h1>
+                    <div class="middle">
+                        <a href="/singUp" class="btn1"> cadastrar novo jogo</a>
+                    </div>
+
+                    <div class="box">
+                        <h2 id="terror">Terror</h2>
+                        <section id="cards">
+                            <%jogosTerror.forEach((terror)=> { %>
+
+                                <a href="/details/<%= terror.tipo %>/<%= terror.id %>">
+                                    <div class="jogos">
+                                        <h3>
+                                            <%= terror.nome %>
+                                        </h3>
+                                        <img src="<%=terror.imagem%>" alt="Imagem do jogo">
+                                </a>
+                                <div class="icons">
+                                    <a id="apagarTerror" href="/deleteTerror/<%= terror.id %>">
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
+                                    <a id="editar" href="/update/<%= terror.tipo %>/<%= terror.id %>">
+                                        <i class="bi bi-pencil-fill"></i>
+                                    </a>
+                                    <a id="detalhes" href="/details/<%= terror.tipo %>/<%= terror.id %>">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </a>
+                                </div>
+
+
+                    </div>
+                    <% }) %>
+                        </section>
+                        </div>
+                        <div class="box">
+                            <h2> Tiro</h2>
+                            <section id="cards">
+                                <% jogosTiro.forEach((tiro)=> { %>
+                                    <a href="/details/<%= tiro.tipo %>/<%= tiro.id %>">
+                                        <div class="jogos">
+                                            <h3>
+                                                <%= tiro.nome %>
+                                            </h3>
+                                            <img src="<%=tiro.imagem%>" alt="Imagem do jogo">
+                                    </a>
+                                    </a>
+                                    <div class="icons">
+                                        <a id="apagar" href="/deleteTiro/<%= tiro.id %>">
+                                            <i class="bi bi-trash3"></i>
+                                        </a>
+                                        <a id="apagar" href="/update/<%= tiro.tipo %>/<%= tiro.id %>">
+                                            <i class="bi bi-pencil-fill"></i>
+                                        </a>
+                                        <a id="detalhes" href="/details/<%= tiro.tipo %>/<%= tiro.id %>">
+                                            <i class="bi bi-three-dots-vertical"></i>
+                                        </a>
+                                    </div>
+                        </div>
+                        <% }) %>
+                            </section>
+                            </div>
+                            <div class="box">
+                                <h2> Esportes</h2>
+                                <section id="cards">
+                                    <% jogosEsportes.forEach((esportes)=> { %>
+                                        <a href="/details/<%= esportes.tipo %>/<%= esportes.id %>">
+                                            <div class="jogos">
+                                                <h3>
+                                                    <%= esportes.nome %>
+                                                </h3>
+                                                <img src="<%=esportes.imagem%>" alt="Imagem do jogo">
+                                        </a>
+                                        <div class="icons">
+                                            <a id="apagar" href="/deleteEsportes/<%= esportes.id %>">
+                                                <i class="bi bi-trash3"></i>
+                                            </a>
+                                            <a id="apagar" href="/update/<%= esportes.tipo %>/<%= esportes.id %>">
+                                                <i class="bi bi-pencil-fill"></i>
+                                            </a>
+                                            <a id="detalhes" href="/details/<%= esportes.tipo %>/<%= esportes.id %>">
+                                                <i class="bi bi-three-dots-vertical"></i>
+                                            </a>
+                                        </div>
+                            </div>
+                            <% }) %>
+                                </section>
+                                </div>
+
+
+
+                                <div class="box">
+
+                                    <h2> Ação</h2>
+                                    <section id="cards">
+                                        <% jogosAcao.forEach((acao)=> { %>
+                                            <a href="/details/<%= acao.tipo %>/<%= acao.id %>">
+                                                <div class="jogos">
+                                                    <h3>
+                                                        <%= acao.nome %>
+                                                    </h3>
+                                                    <img src="<%=acao.imagem%>" alt="Imagem do jogo">
+                                            </a>
+                                            </a>
+                                            <div class="icons">
+                                                <a id="apagar" href="/deleteAcao/<%= acao.id %>">
+                                                    <i class="bi bi-trash3"></i>
+                                                </a>
+                                                <a id="apagar" href="/update/<%= acao.tipo %>/<%= acao.id %>">
+                                                    <i class="bi bi-pencil-fill"></i>
+                                                </a>
+                                                <a id="detalhes" href="/details/<%= acao.tipo %>/<%= acao.id %>">
+                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                                <% }) %>
+                                    </section>
+                                    </div>
+                </body>
+                <footer>
+                    <ul>
+                        <li>
+                            <a  href="https://github.com/caiomaximusjs">
+                                <i id="git" class="bi bi-github"></i>
+                    
+                            </a>
+                        </li>
+                        <li>
+
+                            <a href="https://www.linkedin.com/in/caio-maximus-047826231/">
+                                <i id="link" class="bi bi-linkedin"></i> 
+                            </a>
+
+                        </li>
+                    </ul>
+                </footer>
+            </main>
+            <script src="/script.js"></script>
+
+</html>
